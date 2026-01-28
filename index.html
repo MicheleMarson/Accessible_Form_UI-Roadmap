@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="p-2">
+  <section
+    class="mx-auto max-w-200 p-4 text-gray-800 m-4 border-2 border-gray-800 rounded-2xl flex gap-4 sm:flex-row flex-col">
+    <form class="flex-1">
+      <div class="flex flex-col">
+        <label class="text-xl p-2" for="fullName">Full Name</label>
+        <input class="p-2 outline-none border-2 rounded-lg border-gray-800" id="fullName" type="text"
+          placeholder="What should we call you?" aria-required />
+      </div>
+      <div class="flex flex-col">
+        <label class="text-xl p-2" for="email">Email</label>
+        <input class="p-2 outline-none border-2 rounded-lg border-gray-800" id="email" type="email"
+          placeholder="What is your email?" aria-required />
+        <span class="p-2 text-red-600">Email already taken</span>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-xl p-2" for="password">Enter Password</label>
+        <div class="relative">
+          <input class="p-2 w-full outline-none border-2 rounded-lg border-gray-800" id="password" type="password"
+            placeholder="xxxxxxxx" aria-required />
+          <i class="fa fa-eye fa-lg absolute top-1/2 right-0 -translate-1/2 cursor-pointer hover:opacity-60"></i>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-xl p-2" for="confirmPassword">Confirm Password</label>
+        <div class="relative">
+          <input class="p-2 w-full outline-none border-2 rounded-lg border-gray-800" id="confirmPassword" type="password"
+            placeholder="xxxxxxxx" aria-required />
+          <i class="fa fa-eye fa-lg absolute top-1/2 right-0 -translate-1/2 cursor-pointer hover:opacity-60"></i>
+        </div>
+      </div>
+
+      <button class="p-2 cursor-pointer hover:bg-gray-700 ease-in bg-gray-800 text-white rounded-lg w-full mt-4"
+        type="submit">
+        Update Profile
+      </button>
+    </form>
+
+    <aside class="flex flex-col flex-1">
+      <div class="relative rounded-full h-35 w-35 bg-red-500 mx-auto my-4"
+        style="background: conic-gradient(rgb(36, 33, 33) 0deg 234deg, #e5e7eb 234deg 360deg);">
+        <p
+          class="absolute text-2xl flex items-center justify-center h-33 w-33 bg-white top-1/2 left-1/2 -translate-1/2 rounded-full">
+          65%</p>
+      </div>
+      <p class="text-xl mb-2 p-2 text-center">Profile Completeness</p>
+      <div class="p-4 bg-gray-200 rounded-2xl flex-1">
+        <ul class="list-none space-y-2">
+          <li class="line-through text-gray-500">Create Account</li>
+          <li class="line-through text-gray-500">Update Roadmap Progress</li>
+          <li class="line-through text-gray-500">Setup Public Profile</li>
+          <li class="">Complete your first project</li>
+          <li class="">Invite your Friends</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+</body>
+
+</html>
