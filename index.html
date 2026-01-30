@@ -7,9 +7,22 @@
   <title>Form UI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="output.css">
+  <script src="./cookie.js" defer></script>
 </head>
 
 <body class="p-2">
+    <!-- cookie -->
+  <section id="cookie" class="fixed bottom-0 right-0 hidden">
+    <div class="text-white bg-gray-800 p-4 m-4 rounded-2xl space-y-4 max-w-2xs">
+      <div class="flex justify-between">
+        <img class="h-10" src="./cookie.png" />
+        <img id="cookieX" class="h-3 cursor-pointer hover:opacity-70" src="./x.png" />
+      </div>
+      <p>We use cookies to improve your user experience.</p>
+      <button class="p-3 cursor-pointer hover:opacity-80 bg-white text-gray-800 rounded-2xl">I like Cookies</button>
+    </div>
+  </section>
+
   <section
     class="mx-auto max-w-200 p-4 text-gray-800 m-4 border-2 border-gray-800 rounded-2xl flex gap-4 sm:flex-row flex-col">
     <form class="flex-1">
@@ -28,7 +41,7 @@
         <label class="text-xl p-2" for="password">Enter Password</label>
         <div class="relative">
           <input class="p-2 w-full outline-none border-2 rounded-lg border-gray-800" id="password" type="password"
-            placeholder="xxxxxxxx" aria-required />
+            placeholder="xxxxxxxx" aria-required autocomplete/>
           <i class="fa fa-eye fa-lg absolute top-1/2 right-0 -translate-1/2 cursor-pointer hover:opacity-60"></i>
         </div>
       </div>
@@ -36,7 +49,7 @@
         <label class="text-xl p-2" for="confirmPassword">Confirm Password</label>
         <div class="relative">
           <input class="p-2 w-full outline-none border-2 rounded-lg border-gray-800" id="confirmPassword" type="password"
-            placeholder="xxxxxxxx" aria-required />
+            placeholder="xxxxxxxx" aria-required autocomplete/>
           <i class="fa fa-eye fa-lg absolute top-1/2 right-0 -translate-1/2 cursor-pointer hover:opacity-60"></i>
         </div>
       </div>
@@ -66,6 +79,7 @@
       </div>
     </aside>
   </section>
+
 </body>
 
 </html>
